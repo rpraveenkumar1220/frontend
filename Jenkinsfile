@@ -1,22 +1,17 @@
 pipeline {
     agent { label 'workstation'}
     stages {
-        stage('Unit Test')
-        {
-        echo "Unit testing"
+        stage('Unit Test'){
+         steps { echo "Unit testing"  }
+         }
+        stage('Code Analysis'){
+        steps { echo "Code Analysis"  }
         }
-        stage('Code Analysis')
-        {
-        echo "Code Analysis"
+        stage('Security Scans'){
+        steps { echo "Security Scans" }
         }
-        stage('Security Scans')
-        {
-        echo "Security Scans"
+        stage('Publish Artifacts'){
+        steps { echo "Publish Artifacts" }
         }
-        stage('Publish Artifacts')
-        {
-        echo "Publish Artifacts"
-        }
-
-}
-}
+            }
+           }
